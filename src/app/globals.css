@@ -2,26 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  color: var(--text);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+:root {
+  --background: #1b2627;
+  --block: #283739;
+  --layer: #202c2d;
+  --button: #b2f35f;
+  --text: rgb(238 238 238);
+  --table: #1b2627;
+}
+
+.custom-border {
+  border: 1px solid rgb(49 63 64);
 }
